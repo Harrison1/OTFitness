@@ -4,6 +4,7 @@ module.exports = {
     description: `OT Fitness App with DynamoDB, API Gateway, and Lambda Functions`,
     author: `Harrison McGuire`,
   },
+  pathPrefix: `/OTFitness`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
