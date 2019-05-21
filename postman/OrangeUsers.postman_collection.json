@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "4c02d369-8ba6-4d42-859f-33a02b993acc",
+		"name": "OrangeUsers",
+		"description": "Perform CRUD requests for OT Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://1guue111tb.execute-api.us-east-1.amazonaws.com/prod/user",
+							"protocol": "https",
+							"host": [
+								"1guue111tb",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"user"
+							]
+						},
+						"description": "A generic scan to get all users from the dynamo db with a limit of 50"
+					},
+					"response": []
+				},
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t{\n      \"gender\": \"male\",\n      \"name\": {\n        \"title\": \"mr\",\n        \"first\": \"rolf\",\n        \"last\": \"hegdal\"\n      },\n      \"location\": {\n        \"street\": \"ljan terrasse 346\",\n        \"city\": \"vear\",\n        \"state\": \"rogaland\",\n        \"postcode\": \"3095\",\n        \"coordinates\": {\n          \"latitude\": \"54.8646\",\n          \"longitude\": \"-97.3136\"\n        },\n        \"timezone\": {\n          \"offset\": \"-10:00\",\n          \"description\": \"Hawaii\"\n        }\n      },\n      \"email\": \"rolf.hegdal@example.com\",\n      \"login\": {\n        \"uuid\": \"c4168eac-84b8-46ea-b735-c9da9bfb97fd\",\n        \"username\": \"bluefrog786\",\n        \"password\": \"ingrid\",\n        \"salt\": \"GtRFz4NE\",\n        \"md5\": \"5c581c5748fc8c35bd7f16eac9efbb55\",\n        \"sha1\": \"c3feb8887abed9ec1561b9aa2c9f58de21d1d3d9\",\n        \"sha256\": \"684c478a98b43f1ef1703b35b8bbf61b27dbc93d52acd515e141e97e04447712\"\n      },\n      \"dob\": {\n        \"date\": \"1975-11-12T06:34:44Z\",\n        \"age\": 42\n      },\n      \"registered\": {\n        \"date\": \"2015-11-04T22:09:36Z\",\n        \"age\": 2\n      },\n      \"phone\": \"66976498\",\n      \"cell\": \"40652479\",\n      \"id\": {\n        \"name\": \"FN\",\n        \"value\": \"12117533881\"\n      },\n      \"picture\": {\n        \"large\": \"https://randomuser.me/api/portraits/men/65.jpg\",\n        \"medium\": \"https://randomuser.me/api/portraits/med/men/65.jpg\",\n        \"thumbnail\": \"https://randomuser.me/api/portraits/thumb/men/65.jpg\"\n      },\n      \"nat\": \"NO\"\n    }\n}\n"
+						},
+						"url": {
+							"raw": "https://1guue111tb.execute-api.us-east-1.amazonaws.com/prod/user",
+							"protocol": "https",
+							"host": [
+								"1guue111tb",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"user"
+							]
+						},
+						"description": "This will a add a user to the dynamodb, it requires all fields from the random user api."
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "OPTIONS",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://1guue111tb.execute-api.us-east-1.amazonaws.com/prod/user",
+							"protocol": "https",
+							"host": [
+								"1guue111tb",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"UserId\": \"M_2EExmzNnEawKnPX1ZvfQ\"\n}"
+						},
+						"url": {
+							"raw": "https://1guue111tb.execute-api.us-east-1.amazonaws.com/prod/user",
+							"protocol": "https",
+							"host": [
+								"1guue111tb",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"user"
+							]
+						},
+						"description": "Delete the user, you must pass in a valide UserId into the body."
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"UserId\": \"YW-G_hqyON9tJFq4OMLv3A\",\n\t\"first\": \"Bruce\",\n\t\"last\": \"Wayne\"\n}"
+						},
+						"url": {
+							"raw": "https://1guue111tb.execute-api.us-east-1.amazonaws.com/prod/user",
+							"protocol": "https",
+							"host": [
+								"1guue111tb",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"prod",
+								"user"
+							]
+						},
+						"description": "Update User: you must pass in a valid UserId along with a first and last name key value pair,"
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for user"
+		}
+	]
+}
