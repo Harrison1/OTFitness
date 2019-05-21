@@ -1,3 +1,5 @@
+# OT Fitness App
+
 `yarn` or `npm install`
 
 `gatsby develop`
