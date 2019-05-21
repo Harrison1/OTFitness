@@ -4,10 +4,10 @@ test('capitilze first letter', () => {
   expect(capitizeFirstLetter('harrison')).toBe('Harrison');
 });
 
-test('capitilze first letter', () => {
+test('should return an empty string', () => {
   expect(capitizeFirstLetter(undefined)).toBe('');
 });
 
-test('capitilze first letter', () => {
+test('should return an empty string', () => {
   expect(capitizeFirstLetter(null)).toBe('');
 });
