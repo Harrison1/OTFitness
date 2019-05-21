@@ -89,29 +89,6 @@ const Input = styled.input`
 `
 
 const EditModal = (props: ModalProps) => {
-  // const [firstName, setFirstName] = React.useState('')
-  // const [lastName, setLastName] = React.useState('')
-  // // const [errorMessage, setErrorMessage] = React.useState('');
-
-  // const handleFirstName = (e: React.FormEvent<HTMLInputElement>): void => {
-  //   // setErrorMessage('');
-  //   setFirstName(e.currentTarget.value.trim());
-  // };
-
-  // const handleLastName = (e: React.FormEvent<HTMLInputElement>): void => {
-  //   // setErrorMessage('');
-  //   setLastName(e.currentTarget.value.trim());
-  // };
-
-  // React.useEffect(() => {
-  //   console.log('hello')
-  //   if(props && props.user && props.user.Name) {
-  //     console.log('galaxy')
-  //     setFirstName(props.user.Name.first)
-  //     setLastName(props.user.Name.last)
-  //   }
-  // }, [props])
-
   const triggerUpdate = () => {
     props.updateUser(props.user.UserId, props.firstName.toLowerCase(), props.lastName.toLowerCase())
   }
